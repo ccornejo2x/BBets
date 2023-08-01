@@ -114,12 +114,24 @@ By experimenting with various values and manipulating the function, I successful
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+```{r}
+fairlow <- array (40)
+for(i in 1:40){
+  fairlow[i] <- BrLw(numClass = 28)
+}
+```
 
+```{r}
+sorted_fairlow<-sort(fairlow)
+plot(sorted_fairlow, type = "l", xlab = "Index", ylab = "Value",
+    main = "Line Plot of Brownlow Numerical Vector")
+```
 
+```{r}
+favstats(sorted_fairlow)
+```
 
-
-
-
+In this inquiry, we employed the variable "numClass" to determine the optimal number of students that would bring us as near as possible to zero. We iteratively adjusted our results to approach zero, but we were restricted to using whole numbers since fractions of students are not feasible. The final count of students we arrived at for this scenario was 28.
 
 # Discussion and Conclusion
 
