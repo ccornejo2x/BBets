@@ -137,3 +137,4 @@ In this inquiry, we employed the variable "numClass" to determine the optimal nu
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+In conclusion , our findings indicate that maintaining a class size of approximately 28 students allows Browlow to balance his profits close to zero. He consistently experiences both profitable and loss-making situations.
