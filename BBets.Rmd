@@ -92,8 +92,23 @@ On average, they earn approximately  281.42. The 95% confidence interval extends
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
+```{r}
+b_low <-array(100)
+for(i in 1:100) {
+  b_low[i] <- BrLw(odds=4.37)
+}
+```
 
+```{r}
+sorted_b_low <- sort(b_low)
+plot(sorted_brownlow, type = "l", xlab = "Index", ylab = "Value",
+    main = "Line Plot of Brownlow Numerical Vector")
+```
+```{r}
+favstats(sorted_b_low)
+```
 
+By experimenting with various values and manipulating the function, I successfully approached a mean value as close to 0 as possible. Presently, the mean stands at 1.0309 with odds of 4.37. It was verified that the odds ranged between 4 and 4.5, leading to a standard deviation of approximately 49.53692, which can be approximated to 50. The confidence interval spans two standard deviations above and below the mean. In this scenario, the upper limit above the mean would be approximately 51, while the lower limit below the mean would be approximately -49.
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
